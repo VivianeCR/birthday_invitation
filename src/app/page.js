@@ -38,28 +38,28 @@ export default function Home() {
   const handleMouseMove = (event) => {
     if (!confettiRef.current) return
 
-    for (let i = 0; i < 3; i++) {
-      const container = confettiRef.current
-      const confetti = document.createElement("div")
-      confetti.classList.add("confetti")
-      container.appendChild(confetti)
+    // for (let i = 0; i < 3; i++) {
+    //   const container = confettiRef.current
+    //   const confetti = document.createElement("div")
+    //   confetti.classList.add("confetti")
+    //   container.appendChild(confetti)
 
-      const randomX = Math.floor(Math.random() * 30)
-      const randomY = Math.floor(Math.random() * 30)
-      console.log(event)
-      confetti.style.position = "absolute"
-      confetti.style.left = `${event.pageX + randomX}px`
-      confetti.style.top = `${event.pageY + randomY}px`
+    //   const randomX = Math.floor(Math.random() * 30)
+    //   const randomY = Math.floor(Math.random() * 30)
+    //   console.log(event)
+    //   confetti.style.position = "absolute"
+    //   confetti.style.left = `${event.pageX + randomX}px`
+    //   confetti.style.top = `${event.pageY + randomY}px`
 
-      const randomColor = Math.floor(Math.random() * 256)
-      confetti.style.backgroundColor = `rgb(255, 255, ${randomColor})`
+    //   const randomColor = Math.floor(Math.random() * 256)
+    //   confetti.style.backgroundColor = `rgb(255, 255, ${randomColor})`
 
-      setTimeout(() => {
-        if (confetti.parentNode) {
-          container.removeChild(confetti)
-        }
-      }, 500)
-    }
+    //   setTimeout(() => {
+    //     if (confetti.parentNode) {
+    //       container.removeChild(confetti)
+    //     }
+    //   }, 500)
+    // }
   }
 
   return (
@@ -75,18 +75,19 @@ export default function Home() {
           </div>
           <div className='p-5'>
             <span className={`${Honk.className} text-2xl`}>
-              You're invited to:
+              Você está convidado para:
             </span>
-            <h1
-              className={`${ClimateCrisis.className} text-pink-400 uppercase text-4xl pixel-text`}
-            >
-              Urvashi's
-            </h1>
             <h2
               className={`${ClimateCrisis.className} uppercase text-2xl pixel-text`}
             >
-              Birthday Eve
+              O Trintou da
             </h2>
+            <h1
+              className={`${ClimateCrisis.className} text-pink-400 uppercase text-4xl pixel-text`}
+            >
+              Viviane
+            </h1>
+           
           </div>
           <div>
             <Image
@@ -101,7 +102,7 @@ export default function Home() {
         <div className='grid md:grid-cols-[1fr_2fr_1fr] gap-3 p-3'>
           <div className='bg-[#f4ebd0] relative p-5 pixel-border flex flex-col justify-center items-center'>
             <Image
-              src='/capsules.png'
+              src='/Confirme Aqui! (2).png'
               className='absolute top-0 z-0'
               alt='Capsule'
               width={120}
@@ -109,14 +110,16 @@ export default function Home() {
             />
             <h3
               className={`${ClimateCrisis.className} z-10 text-center uppercase text-xl pixel-text`}
-            >
-              Party Smart
+            > <br/>
+            <br/>
+            <br/>
+            
             </h3>
             <div className='bg-stone-400 z-10 pixel-border px-3 py-1 mt-5 text-center leading-4'>
               <span
                 className={`${Micro5.className} text-black text-center text-xl uppercase`}
               >
-                We've got you covered!
+                O tema nostalgico da melhor época!!!
               </span>
             </div>
           </div>
@@ -124,7 +127,7 @@ export default function Home() {
             <h2
               className={`${ClimateCrisis.className} uppercase text-3xl pixel-text`}
             >
-              Homecooked
+              Caseiro
             </h2>
             <div className='flex justify-between'>
               <div className='rounded-md bg-gradient-to-br from-yellow-100 to-yellow-400 border-yellow-600 border-4 drop-shadow-md'>
@@ -164,7 +167,7 @@ export default function Home() {
             <div
               className={`pixel-border absolute left-0 bottom-0 leading-4 bg-stone-400 w-1/2 ${Micro5.className} uppercase p-5 text-black text-xl`}
             >
-              Strawberry Vanilla Cake
+              Bolo de Chocolate
             </div>
           </div>
           <div className='p-2 pixel-border relative bg-gradient-to-b from-blue-500 to-sky-400 flex flex-col justify-center items-center'>
@@ -193,9 +196,9 @@ export default function Home() {
               <h2
                 className={`${ClimateCrisis.className} text-sky-200 uppercase text-2xl pixel-text`}
               >
-                22 Feb
+                06 de Março
               </h2>
-              <span className={`${Honk.className} text-2xl`}>8 PM</span>
+              <span className={`${Honk.className} text-2xl`}>19h</span>
             </div>
             <Image
               src='/building.png'
@@ -219,7 +222,7 @@ export default function Home() {
                 <h3
                   className={`${Nabla.className} text-center uppercase text-3xl pixel-text`}
                 >
-                  Drinking Games
+                  Jogos de tabuleiro
                 </h3>
               </div>
               <div className='bg-white pixel-border'>
@@ -228,7 +231,13 @@ export default function Home() {
             </div>
             <div className='flex gap-3 justify-between h-full'>
               <div className='pixel-border bg-orange-500 p-5  w-full h-full flex flex-col justify-center items-center'>
-                <span
+              <Image             
+                  src='/1995.gif'
+                  width='150'
+                  height='150'
+                  alt='nostalgia 2000'
+                /> 
+                {/* <span
                   className={`${ClimateCrisis.className} text-white text-xl`}
                 >
                   Join Wifi
@@ -238,16 +247,19 @@ export default function Home() {
                 </span>
                 <span className={`${ComicNeue.className} font-bold`}>
                   password
-                </span>
+                </span> */}
               </div>
               <div className='pixel-border bg-emerald-500 p-5  w-full h-full flex justify-center items-center'>
-                <Image
-                  src='/rsvp.gif'
+              <a
+                  href='https://api.whatsapp.com/send?phone=5591985449430&text=Confirmado!%20Estarei%20l%C3%A1!%20%F0%9F%8E%89'>
+                <Image             
+                  src='/30tou.gif'
                   width='150'
                   height='150'
                   alt='RSVP'
                   className='w-fit bounce cursor-pointer'
-                />
+                /> 
+              </a>
               </div>
             </div>
           </div>
@@ -261,7 +273,7 @@ export default function Home() {
               <span
                 className={`${ComicNeue.className} text-black text-center font-bold text-sm`}
               >
-                Add your favourite party songs!
+                Adicione suas músicas de festa favoritas!
               </span>
               <div className='h-[200px] overflow-y-scroll flex flex-col gap-2 old-scrollbar p-2'>
                 {songs.map((song, index) => {
@@ -281,17 +293,17 @@ export default function Home() {
               </div>
 
               <a
-                href=''
+                href='https://www.youtube.com/playlist?list=PLNnQYfnftzfFjTYpRN95B9dBmYRz-wqJs&jct=F4b2p10dz_ysH4BFrqpSxw' 
                 className={`text-blue-500 ${ComicNeue.className} font-bold text-lg underline`}
               >
-                Join Playlist
+                Junte-se a Playlist
               </a>
             </div>
           </div>
-          <div className={`h-80 relative flex`}>
+          <div  className={`h-80 relative flex`}>
             <Image
               alt='friends'
-              src='/see-you-soon.gif'
+              src='/nostalgia.gif'
               width={100}
               height={100}
               className='md:absolute z-0 h-full w-auto md:w-full md:h-auto bottom-0'
@@ -299,21 +311,21 @@ export default function Home() {
             <h3
               className={`${ClimateCrisis.className} z-10 text-center uppercase text-fuchsia-300 p-5 text-3xl pixel-text`}
             >
-              See you soon!
+              {/* See you soon! */}
             </h3>
           </div>
           <div className='pixel-border bg-stone-600  h-full flex justify-center items-center'>
             <h3
               className={`${ClimateCrisis.className} text-center uppercase text-stone-400 p-5 text-3xl pixel-text`}
             >
-              Coming Soon...
+             Vejo você em breve...
             </h3>
           </div>
           <div className='pixel-border p-5 bg-pink-300 h-full flex flex-col justify-center items-center'>
             <h3
               className={`${Nabla.className} uppercase text-lime-500 text-3xl pixel-text`}
             >
-              Photos
+              Fotos
             </h3>
             <Image
               src='/drive.png'
@@ -325,12 +337,11 @@ export default function Home() {
             <div
               className={`pixel-border leading-4 bg-stone-400 ${Micro5.className} uppercase p-3 text-black text-xl`}
             >
-              You can find all your photos on this drive! If you have more,
-              please add them here
+              Você pode encontrar todas as suas fotos nesta unidade! Se você tiver mais, adicione-as aqui
             </div>
             <button className='bg-gradient-to-b from-blue-300 to-blue-600 hover:from-blue-400 hover:to-blue-700 pixel-border rounded-full px-3 py-1 mt-5'>
-              <a className={`${Honk.className} text-black text-xl`}>
-                Add Photos
+              <a href="https://drive.google.com/drive/folders/1Tl2Y1jcZzvHVs9k4LpjvycMbmI-rTGhr?usp=sharing" className={`${Honk.className} text-black text-xl`}>
+                Add Fotos
               </a>
             </button>
           </div>
